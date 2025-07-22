@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaheer's Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #38bdf8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-content {
+      padding: 1.2rem;
+    }
+
+    .card-content h2 {
+      font-size: 1.5rem;
+      color: #e2e8f0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    .card-content a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .card-content a:hover {
+      background-color: #0ea5e9;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Splash Animation */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 3s forwards;
+    }
+
+    .sparkle-text {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sparkle-text::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="splash">
+    <div class="sparkle-text">Shaheer's Portfolio</div>
+  </div>
+
+  <h1>My Projects</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="assets/images/foodyz.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Foodyz</h2>
+        <p>🔥A modern fast-food restaurant landing page</p>
+        <a href="https://shaheerayyaz.github.io/foodyz/" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/saas.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Saas</h2>
+        <p>🚀Scale your software with a compelling SaaS UI</p>
+        <a href="https://shaheerayyaz.github.io/Saas/">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/find my dpp.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Find my Dietitian</h2>
+        <p>🥗Connect with certified dietitians effortlessly</p>
+        <a href="https://shaheerayyaz.github.io/find-my-dietitian/">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/tinder.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Tinder for Dogs</h2>
+        <p>🐶A fun, quirky app concept to connect dogs nearb</p>
+        <a href="https://shaheerayyaz.github.io/tinder-for-dogs/">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/simon.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Simon says Game</h2>
+        <p>🎮Interactive and fully-functional memory game</p>
+        <a href="https://shaheerayyaz.github.io/simon-says-game/">View Project</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/piano.png" alt="Project Image">
+      <div class="card-content">
+        <h2>Piano</h2>
+        <p>🎹Playable digital piano controlled via keyboard</p>
+        <a href="https://shaheerayyaz.github.io/Piano/">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const splash = document.querySelector('.splash');
+      splash.style.display = 'none';
+    }, 4000);
+  </script>
+</body>
+
+</html>
